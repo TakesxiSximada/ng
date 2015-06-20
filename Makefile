@@ -14,8 +14,11 @@ build: bin/buildout
 rebuild: clean build
 	echo
 
-bin/buildout: env
-	curl https://raw.githubusercontent.com/buildout/buildout/master/bootstrap/bootstrap.py | env/bin/python
+bin/buildout: env bootstrap.py
+	cat bootstrap.py | python
+
+bootstrap.py:
+	curl https://raw.githubusercontent.com/buildout/buildout/master/bootstrap/bootstrap.py > bootstrap.py
 
 env:
 	virtualenv --no-site-packages env
