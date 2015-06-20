@@ -12,3 +12,4 @@
 - curl
 - python
 - virtualenv
+- ruby
