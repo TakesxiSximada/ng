@@ -12,7 +12,7 @@ clean:
 
 build: bin/buildout
 	@echo "**** EXECUTE buildout *****"
-	bin/buildout -c buildout.cfg
+	bin/buildout -vc buildout.cfg
 
 rebuild: clean build
 	@echo "**** REBUILD FINISHED *****"
