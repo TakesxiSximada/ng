@@ -1,0 +1,14 @@
+.DEFAULT_GOAL_NAME := help
+NG_MK_PATH := $(CURDIR)/home/src/ng/mk
+NG_CONF_ROOT_CONF := $(CURDIR)/etc/ng
+NG_CONF_DIR := $(CURDIR)/etc/ng.d
+NG_LOCAL := $(CURDIR)/local
+
+
+.PHONY: help
+help:
+	@# display usage
+
+	@unmake $(MAKEFILE_LIST)
+
+include $(NG_MK_PATH)/*.mk
