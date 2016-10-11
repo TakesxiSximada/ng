@@ -37,6 +37,7 @@ create:
 	make rbenv
 	make ruby-build
 	make perlbrew
+	make gisting
 
 .PHONY: config
 config: $(NG_CONF_ROOT_CONF) $(NG_LOCAL_CONF_NG)
