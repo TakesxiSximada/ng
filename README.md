@@ -10,6 +10,13 @@ $ cp $NG_ROOT/ng.mk.example ng.mk
 $ ln -s ng.mk Makefile
 ```
 
+## NEW INSTALL
+
+```
+$ curl -LO https://raw.githubusercontent.com/TakesxiSximada/ng/master/bootstrap.sh
+$ bash bootstrap.sh
+```
+
 ## HOW TO USE IT
 
 ### Create environment
@@ -66,4 +73,3 @@ $ make
 
 - GNU Make
 - unmake https://github.com/TakesxiSximada/unmake
-

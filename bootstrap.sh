@@ -15,8 +15,22 @@ then
 fi
 
 GOPATH=$PWD
-NG_ROOT=$GOAPTH/src/TakesxiSximada/ng/ng
+NG_REPO=github.com/TakesxiSximada/ng
+NG_ROOT=$GOPATH/src/$NG_REPO
 
-go get -u -d github.com/TakesxiSximada/ng
-ln -sf $NG_ROOT/ng.mk.example Makefile
+go get -u -d $NG_REPO
+
+if [ -e ng.mk ]
+then
+    echo "WARNING: ng.mk already exist"
+else
+    cp $NG_ROOT/ng.mk.example ng.mk
+fi
+
+if [ -e Makefile ]
+then
+    echo "WARNING: Makefile already exist"
+else
+    ln -sf ng.mk Makefile
+fi
 make create
